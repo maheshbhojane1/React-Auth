@@ -1,16 +1,73 @@
-# React + Vite
+React Firebase Authentication – Login & Signup System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and clean authentication system built using React, Firebase Authentication, and Firestore.
+This project was created as an interview assignment to demonstrate skills in:
 
-Currently, two official plugins are available:
+✅ Frontend development
+✅ React Hooks
+✅ Firebase services
+✅ Secure user authentication
+✅ Firestore user management
+✅ Clean UI + Routing
+✅ Error handling + Toast notifications
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Routing
 
-## React Compiler
+/signup → Create new account
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+/login → User login page
 
-## Expanding the ESLint configuration
+/profile → Protected profile screen
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⚡ React + Firebase Hooks
+
+useState, useEffect
+
+onAuthStateChanged
+
+Real-time authentication state listener
+
+🎉 Toast Notifications
+
+Success toast on signup
+
+
+src/
+│── components/
+│    ├── signup.jsx
+│    ├── login.jsx
+│    ├── profile.jsx
+│    └── firebase.js
+│
+├── App.js
+├── App.css
+└── index.js
+
+Authentication Flow Explanation
+1. User signs up
+
+Firebase creates a user account
+
+Firestore saves user details
+
+Toast shows “User Registered Successfully”
+
+2. User logs in
+
+Firebase verifies credentials
+
+Toast shows “User Logged In”
+
+User is redirected to /profile
+
+3. Profile page loads
+
+A real-time auth listener checks logged-in user
+
+Firestore fetches user details
+
+Displays “Welcome, FirstName”, LastName”, "Email"
+
+Success toast on login
+
+Error toast on invalid inputs
